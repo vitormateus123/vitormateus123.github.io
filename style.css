@@ -46,10 +46,14 @@
 #typewriter {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    white-space: pre-wrap; /* Mantém quebras de linha */
-    overflow: hidden; /* Esconde o texto que ainda não foi digitado */
-    width: 0; /* O texto começa escondido */
-    animation: type 3s steps(40, end) forwards, blink 0.75s step-end infinite; /* Efeito de digitação e piscada do cursor */
+    white-space: pre-wrap;
+    /* Mantém quebras de linha */
+    overflow: hidden;
+    /* Esconde o texto que ainda não foi digitado */
+    width: 0;
+    /* O texto começa escondido */
+    animation: type 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+    /* Efeito de digitação e piscada do cursor */
 }
 
 @keyframes type {
@@ -63,6 +67,7 @@
 }
 
 @keyframes blink {
+
     from,
     to {
         border-color: transparent;
@@ -83,8 +88,10 @@
 #galeria {
     padding: 50px;
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas */
-    justify-content: center; /* Centraliza as imagens */
+    flex-wrap: wrap;
+    /* Permite que as imagens se ajustem em várias linhas */
+    justify-content: center;
+    /* Centraliza as imagens */
 }
 
 .galery {
@@ -105,15 +112,18 @@
 
 .video {
     width: 100%;
-    height: 100vh; /* Ocupa a altura total da tela */
-    position: relative; /* Para garantir que o vídeo preencha a div */
+    height: 100vh;
+    /* Ocupa a altura total da tela */
+    position: relative;
+    /* Para garantir que o vídeo preencha a div */
     overflow: hidden;
 }
 
 .video video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Corta o vídeo para cobrir a div inteira */
+    object-fit: cover;
+    /* Corta o vídeo para cobrir a div inteira */
     position: absolute;
     top: 0;
     left: 0;
@@ -174,30 +184,40 @@
 }
 
 .girar {
-    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
-    animation: girar 4s linear infinite; /* Aplica a animação */
+    width: 200px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    animation: girar 4s linear infinite;
+    /* Aplica a animação */
 }
 
 .girar2 {
-    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
-    animation: girar 4s linear infinite; /* Aplica a animação */
+    width: 200px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    animation: girar 4s linear infinite;
+    /* Aplica a animação */
 }
 
 @keyframes girar {
     from {
-        transform: rotate(0deg); /* Início da rotação */
+        transform: rotate(0deg);
+        /* Início da rotação */
     }
+
     to {
-        transform: rotate(360deg); /* Final da rotação */
+        transform: rotate(360deg);
+        /* Final da rotação */
     }
 }
 
 @keyframes girar2 {
     from {
-        transform: rotate(360deg); /* Início da rotação */
+        transform: rotate(360deg);
+        /* Início da rotação */
     }
+
     to {
-        transform: rotate(0deg); /* Final da rotação */
+        transform: rotate(0deg);
+        /* Final da rotação */
     }
 }
 
@@ -241,40 +261,79 @@
 /* Estilos responsivos */
 @media (max-width: 768px) {
     #cabecalho {
-        flex-direction: column; /* Altera a direção para coluna em telas pequenas */
-        padding: 20pt; /* Reduz o padding */
+        flex-direction: column;
+        /* Altera a direção para coluna em telas pequenas */
+        padding: 20pt;
+        /* Reduz o padding */
     }
 
     #cabecalho h1 {
-        font-size: 20pt; /* Reduz o tamanho da fonte */
+        font-size: 20pt;
+        /* Reduz o tamanho da fonte */
     }
 
     #texto {
-        padding: 20px; /* Reduz o padding */
-        font-size: 18px; /* Reduz o tamanho da fonte */
+        padding: 20px;
+        /* Reduz o padding */
+        font-size: 18px;
+        /* Reduz o tamanho da fonte */
     }
 
     #galeria {
-        padding: 20px; /* Reduz o padding */
+        padding: 20px;
+        /* Reduz o padding */
     }
 
     .galery {
-        width: 100px; /* Reduz a largura das imagens da galeria */
-        height: 100px; /* Reduz a altura das imagens da galeria */
+        width: 100px;
+        /* Reduz a largura das imagens da galeria */
+        height: 100px;
+        /* Reduz a altura das imagens da galeria */
     }
 
     #videos video {
-        width: 100%; /* Garante que os vídeos ocupem 100% da largura */
-        height: auto; /* Mantém a proporção do vídeo */
+        width: 100%;
+        /* Garante que os vídeos ocupem 100% da largura */
+        height: auto;
+        /* Mantém a proporção do vídeo */
+    }
+
+}
+
+@media (max-width: 768px) {
+    #fotoGrande {
+        flex-direction: column;
+        /* Muda a direção para coluna em telas pequenas */
+        padding: 20px;
+        /* Reduz o padding */
     }
 
     #fotoGrande img {
-        width: 100%; /* Garante que a imagem grande ocupe 100% da largura */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 100%;
+        /* Faz as imagens ocuparem 100% da largura do container */
+        height: auto;
+        /* Mantém a proporção da imagem */
+    }
+
+    #textoFoto {
+        padding: 20px;
+        /* Reduz o padding */
+    }
+
+    #textoFoto h1 {
+        font-size: 30px;
+        /* Reduz o tamanho da fonte do título */
+    }
+
+    #textoFoto p {
+        font-size: 16px;
+        /* Reduz o tamanho da fonte do parágrafo */
     }
 
     #textoFoto img {
-        width: 150px; /* Reduz a largura das imagens na seção de texto */
-        height: 150px; /* Reduz a altura das imagens na seção de texto */
+        width: 150px;
+        /* Ajusta a largura das imagens na seção de texto */
+        height: auto;
+        /* Mantém a proporção das imagens */
     }
 }
