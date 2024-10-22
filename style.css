@@ -280,15 +280,17 @@
     }
 
     #galeria {
-        padding: 20px;
-        /* Reduz o padding */
+        justify-content: center;
     }
 
     .galery {
-        width: 100px;
-        /* Reduz a largura das imagens da galeria */
+        width: 100px; /* Reduz o tamanho das imagens em telas pequenas */
         height: 100px;
-        /* Reduz a altura das imagens da galeria */
+    }
+
+    #galeria img:hover {
+        width: 120px;
+        height: 120px;
     }
 
     #videos video {
@@ -298,6 +300,16 @@
         /* Mantém a proporção do vídeo */
     }
 
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    #galeria {
+        justify-content: center;
+    }
+
+    .galery {
+        flex: 1 1 30%; /* Cada imagem ocupa 30% da largura, criando 3 colunas */
+        margin: 10px;
+    }
 }
 
 @media (max-width: 768px) {
