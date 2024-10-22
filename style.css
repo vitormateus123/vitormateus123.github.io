@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#cabecalho {
+    text-align: center;
+    align-items: center;
+    background-color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25pt;
+    padding: 30pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition-timing-function: ease-in-out;   
+
+}
+
+#cabecalho h1 {
+    transition:
+        width 2s,
+        height 2s,
+        background-color 2s,
+        rotate 2s;
+        transition-timing-function: ease-in-out;
+
+}
+
+#cabecalho h1:hover {
+    color: turquoise;
+    transition: 0.5s all;
+
+}
+
+#cabecalho img {
+    height: max-content;
+    width: 150px;
+    transition:
+        width 2s,
+        height 2s,
+        background-color 2s,
+        rotate 2s;
+}
+
+#cabecalho img:hover {
+    rotate: 180deg;
+}
+
+#texto {
+    text-align: center;
+    padding: 50px 200px 50px 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#typewriter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    white-space: pre-wrap;
+    /* Mantém quebras de linha */
+    overflow: hidden;
+    /* Esconde o texto que ainda não foi digitado */
+    width: 0;
+    /* O texto começa escondido */
+    animation: type 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+    /* Efeito de digitação e piscada do cursor */
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+#quote {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+#galeria {
+    padding: 50px;
+}
+
+.galery {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    transition: 0.5s all;
+    transition-timing-function: ease-in-out;
+}
+
+#galeria img:hover {
+    width: 200px;
+    height: 200px;
+    transition: 0.5s all;
+    transition-timing-function: ease-in-out;
+    margin: 0px
+}
+
+.video {
+    width: 100%;
+    height: 100vh;
+    /* Ocupa a altura total da tela */
+    position: relative;
+    /* Para garantir que o vídeo preencha a div */
+    overflow: hidden;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Corta o vídeo para cobrir a div inteira */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#borda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+#videos video {
+    width: 450px;
+    height: 450px;
+}
+
+#showFullText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+    background-color: bisque;
+}
+
+#cronometro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 90px;
+    background-color: aquamarine;
+}
+
+#cronometro h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+#cronometro p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+#contador {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+#cronometro #role {
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.girar {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    animation: girar 4s linear infinite; /* Aplica a animação */
+}
+.girar2 {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    animation: girar 4s linear infinite; /* Aplica a animação */
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg); /* Início da rotação */
+    }
+    to {
+        transform: rotate(360deg); /* Final da rotação */
+    }
+}
+@keyframes girar2 {
+    from {
+        transform: rotate(360deg); /* Início da rotação */
+    }
+    to {
+        transform: rotate(0deg); /* Final da rotação */
+    }
+}
+#fotoGrande{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-around;
+}
+#fotoGrande img{
+    width: 770px;
+    height: 750px;
+}
+#textoFoto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px solid black;
+    padding: 30px;
+}
+#textoFoto h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+#textoFoto p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+#textoFoto img{
+    width: 250px;
+    height: 250px;
+}
