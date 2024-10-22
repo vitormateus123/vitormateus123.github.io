@@ -224,7 +224,7 @@
 #fotoGrande {
     display: flex;
     flex-direction: row;
-    padding: 50px;
+    padding: 40px;
     justify-content: space-around;
 }
 
@@ -335,5 +335,58 @@
         /* Ajusta a largura das imagens na seção de texto */
         height: auto;
         /* Mantém a proporção das imagens */
+    }
+}
+#mensagem{
+    padding: 50px;
+}
+#tituloMensagem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    text-align: center;
+    background-color:burlywood;
+}
+#videoMensagem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+    border: 3px solid black;
+    border-radius: 0px 0px 15px 15px;
+    flex-wrap: wrap; /* Permite que os vídeos fiquem em linha separada em telas menores */
+}
+#videoMensagem video {
+    width: 500px;
+    max-width: 100%; /* Faz o vídeo se ajustar ao container em telas menores */
+}
+#msgMensagem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+}
+@media (max-width: 768px) {
+    #videoMensagem {
+        flex-direction: column; /* Alinha os vídeos verticalmente em telas pequenas */
+        padding: 20px;
+    }
+
+    #videoMensagem video {
+        width: 100%; /* Faz os vídeos ocuparem toda a largura do container em telas pequenas */
+    }
+
+    #tituloMensagem h1 {
+        font-size: 24px; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    #msgMensagem {
+        font-size: 12px; /* Reduz o tamanho do texto em telas menores */
+        padding-top: 20px;
     }
 }
